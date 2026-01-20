@@ -24,3 +24,31 @@ kubectl get services
 ```bash
 minikube service kubernetes-revisit-service
 ```
+
+## Pod Management
+
+### View logs
+```bash
+kubectl logs <pod-name>
+```
+
+### Describe pod (detailed info)
+```bash
+kubectl describe pod <pod-name>
+```
+
+### Self-healing
+When you delete a pod, Kubernetes automatically creates a new one:
+```bash
+kubectl delete pod <pod-name>
+kubectl get pods  # New pod appears
+```
+
+### Scale replicas
+```bash
+# Scale to 5 replicas
+kubectl scale deployment kubernetes-revisit --replicas=5
+
+# Check all running pods
+kubectl get pods
+```
