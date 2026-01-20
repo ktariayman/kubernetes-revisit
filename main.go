@@ -82,7 +82,7 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	response := HealthResponse{
-		Status:    "healthy",
+		Status:    "the app is healthy",
 		Timestamp: time.Now().UTC(),
 		Service:   "kubernetes-revisit",
 		Database:  dbStatus,
