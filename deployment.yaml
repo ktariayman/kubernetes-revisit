@@ -20,3 +20,6 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
+        env:
+        - name: DATABASE_URL
+          value: "host=postgres-service port=5432 user=admin password=password123 dbname=mydb sslmode=disable"
